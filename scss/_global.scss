@@ -1,0 +1,45 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: $background;
+    color: #fff;
+}
+
+.main-btn {
+    box-sizing: border-box;
+    border: none;
+    font-size: 18px;
+    background-color: $color2;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    font-family: 'Jost';
+    width: fit-content;
+    transition: .35s ease;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(.9);
+    }
+}
+
+.section-title {
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    font-size: 36px;
+    span {
+        color: $color1;
+    }
+}

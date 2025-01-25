@@ -1,0 +1,58 @@
+.edge {
+    &.custom {
+         margin-bottom: 40px;
+    }
+    // .edge__wrap
+
+    &__wrap {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin: 0 -10px;
+        margin-top: -15px;
+    }
+    &__item {
+        margin: 0 10px;
+        background-color: $frontground;
+        padding: 15px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        width: calc(25% - 20px);
+        h3 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: "Jost";
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            >span{
+                font-size: inherit;
+                font-family: inherit;
+                color: $color1;
+            }
+        }
+        .img {
+            img {
+                width: 36px;
+                height: 36px;
+                object-fit: contain;
+            }
+            svg {
+                width: 80px;
+                height: 80px;
+                box-sizing: border-box;
+            }
+        }
+        span {
+            font-size: 18px;
+            font-family: 'Jost';
+        }
+    }
+}
+.container {
+}
+.img {
+}
+

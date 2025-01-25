@@ -1,0 +1,118 @@
+
+
+.hero {
+    box-sizing: border-box;
+    padding: 40px 0;
+
+    // .hero__wrap
+
+    &__wrap {
+        box-sizing: border-box;
+        padding: 40px;
+        background-color: $frontground;
+        border-radius: 20px;
+        background-image: url(/assets/imgs/1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 115%;
+        background-position-y: bottom;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #00ced1, #00ffff, #00ced1, #00ffff);
+            z-index: -1;
+            animation: neon-glow 2s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #00ced1, #00ffff, #00ced1, #00ffff);
+            filter: blur(10px);
+            z-index: -2;
+            animation: neon-glow 2s linear infinite;
+        }
+    }
+
+    // .hero__title
+
+    &__title {
+        margin-bottom: 30px;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 48px;
+            margin: 0;
+            line-height: 1.2;
+            box-sizing: border-box;
+
+            b {
+                display: block;
+                color: $color1;
+            }
+        }
+    }
+
+    // .hero__desc
+
+    &__desc {
+        max-width: 480px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+
+        p {
+            line-height: 1.1;
+            margin: 0;
+            font-size: 18px;
+            font-family: "Jost";
+            box-sizing: border-box;
+
+        }
+    }
+
+    // .hero__action
+
+    &__action {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        button {
+            &:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.container {}
+
+.main-btn {}
+
+.trans-btn {}
+
+@keyframes neon-glow {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}

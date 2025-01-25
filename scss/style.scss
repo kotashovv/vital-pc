@@ -1,0 +1,26 @@
+$color1: #66fcf1;
+$color2: #45a29e;
+$background: #17171b;
+$frontground: #232327;
+
+@import 'normalize';
+
+@import 'global';
+
+@import 'components/header';
+
+@import 'components/hero';
+
+@import 'components/edge';
+
+@import 'components/gallery';
+
+@import 'components/works';
+
+@import 'components/servs';
+
+@import 'components/order';
+
+@import 'components/faq';
+
+@import 'components/reviews';
