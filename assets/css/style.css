@@ -441,7 +441,7 @@ body {
   padding: 40px;
   background-color: #232327;
   border-radius: 20px;
-  background-image: url(../assets/imgs/1.png);
+  background-image: url(../imgs/1.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 115%;
@@ -863,16 +863,16 @@ body {
   z-index: 1;
 }
 .order__item:nth-child(1) {
-  background-image: url(../assets/imgs/e1-min.jpg);
+  background-image: url(../imgs/e1-min.jpg);
 }
 .order__item:nth-child(2) {
-  background-image: url(../assets/imgs/e2-min.jpg);
+  background-image: url(../imgs/e2-min.jpg);
 }
 .order__item:nth-child(3) {
-  background-image: url(../assets/imgs/e3-min.jpg);
+  background-image: url(../imgs/e3-min.jpg);
 }
 .order__item:nth-child(4) {
-  background-image: url(../assets/imgs/e4-min.jpg);
+  background-image: url(../imgs/e4-min.jpg);
 }
 
 .faq {
