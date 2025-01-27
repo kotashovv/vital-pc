@@ -29,6 +29,10 @@
         border-radius: 15px;
         transition: .35s ease;
         text-decoration: none;
+        @media(max-width:768px) {
+            padding: 5px;
+            box-sizing: border-box;
+        }
         &:hover {
             box-shadow: 0 0 5px $color1;
         }

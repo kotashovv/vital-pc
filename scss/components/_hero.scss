@@ -97,12 +97,6 @@
     }
 }
 
-.container {}
-
-.main-btn {}
-
-.trans-btn {}
-
 @keyframes neon-glow {
     0% {
         opacity: 0.1;
@@ -114,5 +108,68 @@
 
     100% {
         opacity: 0.1;
+    }
+}
+
+@media(max-width:1024px) {
+    .hero {
+        &__title {
+            margin-bottom: 10px;
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+}
+@media(max-width:768px) {
+    .hero {
+        &__wrap {
+            padding-bottom: 320px;
+            background-size: 480px;
+            background-position: bottom center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            margin-bottom: 10px;
+            text-align: center;
+            h1 {
+                font-size: 32px;
+            }
+        }
+        &__desc {
+            text-align: center;
+        }
+    }
+}
+@media(max-width:560px) {
+    .hero {
+        padding: 20px 0;
+        &__wrap {
+        }
+        &__title {
+            margin-bottom: 10px;
+            h1 {
+                font-size: 24px;
+            }
+        }
+        &__desc {
+            p {
+                font-size: 16px;
+            }
+        }
+        &__action {
+            flex-direction: column;
+            width: 100%;
+            button {
+                width: 100%;
+                margin: 0;
+                &:first-child {
+                    margin-bottom: 15px;
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

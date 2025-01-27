@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/libs/fancybox.css">
     <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?ver=2">
     <title>Сборка ПК</title>
 </head>
 
@@ -15,6 +15,14 @@
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
+
+                    <div class="mobile-btn">
+                        <button class="menu-btn">
+                            <span>
+                                
+                            </span>
+                        </button>
+                    </div>
                     <div class="title">
                         <a href="#">
                             <span>Vital</span> <br> Computers
@@ -23,18 +31,18 @@
                     <nav class="menu">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a data-goto="#a-works" href="#">
                                     Готовые сборки
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a data-goto="#a-servs" href="#">
                                     Услуги
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    Ещё
+                                <a data-goto="#a-revs" href="#">
+                                    Отзывы
                                 </a>
                             </li>
                         </ul>
@@ -68,13 +76,13 @@
                             </p>
                         </div>
                         <div class="hero__action">
-                            <button class="main-btn">Создать с нуля</button>
-                            <button class="main-btn trans-btn">Выбрать готовый вариант</button>
+                            <button class="main-btn call-popup">Создать с нуля</button>
+                            <button data-goto="#a-works" class="main-btn trans-btn">Выбрать готовый вариант</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="edge">
+             <section class="edge">
                 <div class="container">
                     <div class="edge__wrap">
                         <article class="edge__item">
@@ -277,7 +285,7 @@
                     </div>
                 </div>
             </section>
-            <section class="works">
+            <section id="a-works" class="works">
                 <div class="container">
                     <div class="works__title">
                         <h2 class="section-title">
@@ -287,7 +295,7 @@
                     <div class="works__items">
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/1111.jpg" alt="">
+                                <img src="assets/imgs/comp1.png" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Standart</span></h3>
@@ -304,13 +312,13 @@
                                     От <span>40 000</span> ₽
                                 </span>
                                 <div class="action">
-                                    <button class="main-btn">Заказать</button>
+                                    <button class="call-popup main-btn">Заказать</button>
                                 </div>
                             </div>
                         </article>
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/1111.jpg" alt="">
+                                <img src="assets/imgs/comp2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Professional</span></h3>
@@ -329,13 +337,13 @@
                                     От <span>80 000</span> ₽
                                 </span>
                                 <div class="action">
-                                    <button class="main-btn">Заказать</button>
+                                    <button class="call-popup main-btn">Заказать</button>
                                 </div>
                             </div>
                         </article>
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/1111.jpg" alt="">
+                                <img src="assets/imgs/comp3.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Ultimate</span></h3>
@@ -355,14 +363,14 @@
                                     От <span>100 000</span> ₽
                                 </span>
                                 <div class="action">
-                                    <button class="main-btn">Заказать</button>
+                                    <button class="call-popup main-btn">Заказать</button>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
-            <section class="servs">
+            <section id="a-servs" class="servs">
                 <div class="container">
                     <div class="servs__title">
                         <h2 class="section-title">
@@ -383,7 +391,7 @@
                                     возникших проблем <br>
                                 </p>
                                 <div class="action">
-                                    <button class="main-btn">Заказать</button>
+                                    <button class="call-popup main-btn">Заказать</button>
                                 </div>
                             </div>
                         </article>
@@ -399,7 +407,7 @@
                                     Сборка ПК из ваших деталей или по вашему выбору.
                                 </p>
                                 <div class="action">
-                                    <button class="main-btn">Заказать</button>
+                                    <button class="call-popup main-btn">Заказать</button>
                                 </div>
                             </div>
                         </article>
@@ -462,7 +470,7 @@
                     </div>
                 </div>
             </section>
-            <section class="order">
+           <section class="order">
                 <div class="container">
                     <div class="order__title">
                         <h2 class="section-title">
@@ -517,7 +525,7 @@
                     </div>
                 </div>
             </section>
-            <section class="faq">
+           <section class="faq">
                 <div class="container">
                     <div class="faq__title">
                         <h2 class="section-title">
@@ -586,7 +594,7 @@
                 </div>
             </section>
             
-            <section class="reviews">
+             <section id="a-revs" class="reviews">
                 <div class="container">
                     <div class="reviews__title">
                         <h2 class="section-title">
@@ -597,34 +605,34 @@
                         </p>
                     </div>
                     <div class="orders__masonry masonry-wrap">
-                        <div class="orders__item masonry-item">
+                        <a href="assets/imgs/1111.jpg" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/1111.jpg" alt="">
-                        </div>
-                        <div class="orders__item masonry-item">
+                        </a>
+                        <a href="assets/imgs/rev.webp" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/rev.webp" alt="">
-                        </div>
-                        <div class="orders__item masonry-item">
+                        </a>
+                        <a href="assets/imgs/rev2.jpg" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/rev2.jpg" alt="">
-                        </div>
-                        <div class="orders__item masonry-item">
+                        </a>
+                        <a href="assets/imgs/rev3.webp" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/rev3.webp" alt="">
-                        </div>
-                        <div class="orders__item masonry-item">
+                        </a>
+                        <a href="assets/imgs/rev4.jpg" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/rev4.jpg" alt="">
-                        </div>
-                        <div class="orders__item masonry-item">
+                        </a>
+                        <a href="assets/imgs/rev5.webp" data-fancybox="reviews" class="orders__item masonry-item">
                             <img src="assets/imgs/rev5.webp" alt="">
-                        </div>
+                        </a>
                     </div>
                 </div>
-            </section>
+            </section> 
         </main>
         <footer class="footer">
             <div class="container">
                 <div class="footer__wrap">
                     <div class="footer__title">
                         <a href="#">
-                            VitalPC
+                            vital <span>Computer</span>
                         </a>
                     </div>
                     <div class="footer__menu">
@@ -676,10 +684,62 @@
             </div>
         </footer>
     </div>
+
+    <div class="popup-wrap">
+        <div class="popup__body">
+            <div id="popup_1" class="popup__item">
+                <button class="close-popup"></button>
+                <div class="title">
+                    <h4>
+                        <span>Оставить заявку</span>
+                    </h4>
+                </div>
+                <form action="#">
+                    <label>
+                        <input placeholder="Ваше имя" type="text" name="username">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Ваш телефон" name="userphone">
+                    </label>
+                    <span>или</span>
+                    <label>
+                        <input type="text" name="userid" placeholder="ID в социальных сетях">
+                    </label>
+                    <label>
+                        <select name="user-select" >
+                            <option value="default">Ваша цель</option>
+                            <option value="upgrade">Обновить ПК</option>
+                            <option value="create">Собрать с нуля</option>
+                        </select>
+                    </label>
+                    <div class="action">
+                        <button class="main-btn">Оставить заявку</button>
+                    </div>
+                </form>
+                <div class="popup-more">
+                    <span>Вы также можете связаться со мной напрямую</span>
+                    <div class="popup-more__wrap">
+                        <a href="#">
+                            Telegram
+                        </a>
+                        <a href="#">
+                            Vk
+                        </a>
+                        <a href="#">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="popup_2" class="popup__item">
+
+            </div> -->
+        </div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="assets/libs/swiper-bundle.min.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js?ver=2"></script>
 
 </html>

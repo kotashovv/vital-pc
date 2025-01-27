@@ -1,0 +1,190 @@
+.popup-wrap {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: auto;
+    max-height: 100vh;
+    padding-top: 20px;
+    background-color: #00000050;    
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        .popup__item {
+            transition: .35s ease;
+            transform: translateY(0);
+        }
+    }
+}
+
+.popup {
+
+		// .popup__body
+
+		&__body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		}
+
+		// .popup__item
+
+		&__item {
+            transform: translateY(-15px);
+            .close-popup {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid $color1;
+                background-color: transparent;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 2px;
+                    width: calc(100% - 4px);
+                    height: 2px;
+                    background-color: $color1;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 2px;
+                    width: calc(100% - 4px);
+                    height: 2px;
+                    background-color: $color1;
+                    transform: rotate(-45deg);
+                }
+            }
+            padding: 40px 30px;
+            box-sizing: border-box;
+            background-color: $frontground;
+            border-radius: 20px;
+            box-shadow: 0 0 5px $color1;
+            z-index: 100;
+            position: relative;
+            z-index: 100;
+            max-width: 720px;
+            width: 100%;
+            margin: 20px 15px 20px;
+            .popup-more {
+                span {
+                    text-align: center;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .popup-more__wrap {
+                    display: flex;
+                    justify-content: center;
+                    a {
+                        display: block;
+                        color: #fff;
+                        margin-right: 20px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .title {
+                text-align: center;
+                margin-bottom: 30px;
+                h4 {
+                    margin: 0;
+                    color: $color1;
+                    font-size: 32px;
+                    font-family: 'Jost';
+                }
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                span {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .action {
+                    display: block;
+                    margin-bottom: 30px;
+                    button {
+                        width: 100%;
+                    }
+                }
+                label {
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-bottom: 15px;
+                    input {
+                        width: 100%;
+                        padding: 20px 15px;
+                        box-sizing: border-box;
+                        background-color: transparent;
+                        border: 1px solid $color1;
+                        color: #fff;
+                        border-radius: 10px;
+                        font-size: 18px;
+                        &::placeholder {
+                            color: #cccccc;
+                        }
+                    }
+                    select {
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        padding: 20px 15px;
+                        border: 1px solid $color1;
+                        color: $color1;
+                        font-size: 18px;
+                        background-color: transparent;
+                        border-radius: 20px;
+                        option {
+                            background-color: $frontground;
+                            padding: 20px;
+                            &:first-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+}
+
+@media(max-width:768px) {
+    .popup {
+        &__item {
+            padding: 30px 15px;
+            .title {
+                h4 {
+                    font-size: 24px;
+                }
+            }
+            form {
+                label {
+                    input {
+                        padding: 15px 10px;
+                        font-size: 18px;
+                    }
+                    select {
+                        font-size: 18px;
+                        padding: 15px 10px;
+                    }
+                }
+                
+            }
+        }
+    }
+}

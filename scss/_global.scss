@@ -7,6 +7,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: $background;
@@ -28,8 +32,15 @@ body {
     width: fit-content;
     transition: .35s ease;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         filter: brightness(.9);
+    }
+
+    &.trans-btn {
+        background-color: transparent;
+        border: 1px solid $color1;
+        color: $color1;
     }
 }
 
@@ -39,7 +50,22 @@ body {
     box-sizing: border-box;
     margin-bottom: 40px;
     font-size: 36px;
+
     span {
         color: $color1;
+    }
+
+    @media(max-width:1024px) {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    @media(max-width:768px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    @media(max-width:560px) {
+        font-size: 24px;
     }
 }

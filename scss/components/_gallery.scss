@@ -4,16 +4,22 @@
     // .gallery__title
 
     &__title {
-        margin-bottom: 30px;
-        h2 {
-            font-size: 36px;
-            display: block;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        span {
-            color: $color1;
-        }
+        // margin-bottom: 30px;
+        // @media(max-width:1024px) {
+        //     margin-bottom: 20px;
+        // }
+        // @media(max-width:768px) {
+        //     margin-bottom: 15px;
+        // }
+        // h2 {
+        //     font-size: 36px;
+        //     display: block;
+        //     margin: 0;
+        //     box-sizing: border-box;
+        // }
+        // span {
+        //     color: $color1;
+        // }
     }
 
     // .gallery__wrap

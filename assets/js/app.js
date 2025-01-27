@@ -2,10 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // настройки слайдера галерии
     const gallerySwiper = new Swiper('.gallery__wrap', {
-        slidesPerView: 2.5,
-        spaceBetween: 30,
         centeredSlides: true,
         initialSlide: 1,
+        breakpoints: {
+            0: {
+                slidesPerView: 1.5,
+                spaceBetween: 15,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            }
+        }
     })
 
     // активация фэнсибокса
@@ -48,4 +60,65 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
     }
+
+    const buttons = document.querySelectorAll('[data-goto]');
+
+    if (buttons.length != 0) {
+        buttons.forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+                // Получаем значение атрибута data-goto (это будет id элемента)
+                const targetId = button.getAttribute('data-goto');
+
+                // Находим целевой элемент по id
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Плавно прокручиваем к целевому элементу
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth', // Плавная прокрутка
+                        block: 'start'      // Выравнивание элемента по верхней части экрана
+                    });
+                }
+            });
+        });
+    }
+
+    const callPopupItems = document.querySelectorAll('.call-popup');
+    if (callPopupItems.length !== 0) {
+        const popupWrap = document.querySelector('.popup-wrap');
+        const closePopupBtn = document.querySelector('.close-popup');
+        const popupItem = document.querySelector('.popup__item'); 
+
+        function openPopup() {
+            document.body.style.overflow = 'hidden'; 
+            popupWrap.classList.add('active'); 
+        }
+
+        
+        function closePopup() {
+            document.body.style.overflow = 'auto';
+            popupWrap.classList.remove('active'); 
+        }
+
+        callPopupItems.forEach(item => {
+            item.addEventListener('click', openPopup);
+        });
+
+        closePopupBtn.addEventListener('click', closePopup);
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && popupWrap.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        popupWrap.addEventListener('click', function(event) {
+            if (!popupItem.contains(event.target)) { 
+                closePopup();
+            }
+        });
+    }
+
 })
