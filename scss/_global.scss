@@ -16,7 +16,13 @@ body {
     background-color: $background;
     color: #fff;
 }
-
+main {
+    transition: .35s ease;
+}
+main.opacity {
+    opacity: .1;
+    pointer-events: none;
+}
 .main-btn {
     box-sizing: border-box;
     border: none;

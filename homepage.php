@@ -1,91 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/libs/fancybox.css">
-    <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?ver=2">
-    <title>Сборка ПК</title>
-</head>
-
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__wrap">
-
-                    <div class="mobile-btn">
-                        <button class="menu-btn">
-                            <span>
-                                
-                            </span>
-                        </button>
-                    </div>
-                    <div class="title">
-                        <a href="#">
-                            <span>Vital</span> <br> Computers
-                        </a>
-                    </div>
-                    <nav class="menu">
-                        <ul>
-                            <li>
-                                <a data-goto="#a-works" href="#">
-                                    Готовые сборки
-                                </a>
-                            </li>
-                            <li>
-                                <a data-goto="#a-servs" href="#">
-                                    Услуги
-                                </a>
-                            </li>
-                            <li>
-                                <a data-goto="#a-revs" href="#">
-                                    Отзывы
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="header__action">
-                        <div class="header__phone">
-                            <a href="+79533477883"></a>
-                        </div>
-                        <div class="header__button">
-                            <button data-popup="popup-1" class="main-btn call-popup">
-                                Заказать пк
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="header__mobile-menu">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a data-goto="#a-works" href="#">
-                                        Готовые сборки
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-goto="#a-servs" href="#">
-                                        Услуги
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-goto="#a-revs" href="#">
-                                        Отзывы
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="mobile-action">
-                            <a class="main-btn" href="tel:+79996000000">Позвонить</a>
-                            <button class="main-btn trans-btn">Оставить заявку</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<?php
+/*
+Template Name: Главная страница
+Template Post Type: page
+*/
+?>
+<?php get_header(); ?>
         <main class="main">
             <section class="hero">
                 <div class="container">
@@ -296,17 +215,17 @@
                 </div>
                 <div class="gallery__wrap swiper">
                     <div class="gallery__wrap-list swiper-wrapper">
-                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="assets/imgs/1111.jpg">
-                            <img src="assets/imgs/1111.jpg" alt="">
+                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" alt="">
                         </a>
-                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="assets/imgs/1111.jpg">
-                            <img src="assets/imgs/1111.jpg" alt="">
+                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" alt="">
                         </a>
-                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="assets/imgs/1111.jpg">
-                            <img src="assets/imgs/1111.jpg" alt="">
+                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" alt="">
                         </a>
-                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="assets/imgs/1111.jpg">
-                            <img src="assets/imgs/1111.jpg" alt="">
+                        <a class="gallery__item swiper-slide" data-fancybox="gallery" href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -321,7 +240,7 @@
                     <div class="works__items">
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/comp1.png" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/comp1.png" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Standart</span></h3>
@@ -344,7 +263,7 @@
                         </article>
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/comp2.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/comp2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Professional</span></h3>
@@ -369,7 +288,7 @@
                         </article>
                         <article class="works__item">
                             <div class="img">
-                                <img src="assets/imgs/comp3.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/comp3.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>Серия <span>Ultimate</span></h3>
@@ -406,7 +325,7 @@
                     <div class="servs__wrap">
                         <article class="servs__item">
                             <div class="img">
-                                <img src="assets/imgs/up0.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/up0.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>
@@ -423,7 +342,7 @@
                         </article>
                         <article class="servs__item">
                             <div class="img">
-                                <img src="assets/imgs/up1.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/up1.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h3>
@@ -631,141 +550,26 @@
                         </p>
                     </div>
                     <div class="orders__masonry masonry-wrap">
-                        <a href="assets/imgs/1111.jpg" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/1111.jpg" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/1111.jpg" alt="">
                         </a>
-                        <a href="assets/imgs/rev.webp" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/rev.webp" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev.webp" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev.webp" alt="">
                         </a>
-                        <a href="assets/imgs/rev2.jpg" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/rev2.jpg" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev2.jpg" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev2.jpg" alt="">
                         </a>
-                        <a href="assets/imgs/rev3.webp" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/rev3.webp" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev3.webp" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev3.webp" alt="">
                         </a>
-                        <a href="assets/imgs/rev4.jpg" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/rev4.jpg" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev4.jpg" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev4.jpg" alt="">
                         </a>
-                        <a href="assets/imgs/rev5.webp" data-fancybox="reviews" class="orders__item masonry-item">
-                            <img src="assets/imgs/rev5.webp" alt="">
+                        <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev5.webp" data-fancybox="reviews" class="orders__item masonry-item">
+                            <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/rev5.webp" alt="">
                         </a>
                     </div>
                 </div>
             </section> 
         </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__wrap">
-                    <div class="footer__title">
-                        <a href="#">
-                            vital <span>Computer</span>
-                        </a>
-                    </div>
-                    <div class="footer__menu">
-                        <div class="footer__subtitle">
-                            Меню
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#">Услуги</a>
-                            </li>
-                            <li>
-                                <a href="#">Товары</a>
-                            </li>
-                            <li>
-                                <a href="#">Обо мне</a>
-                            </li>
-                            <li>
-                                <a href="#">Гарантия</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__contact">
-                        <div class="footer__subtitle">
-                            <h3>
-                                Контакты
-                            </h3>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#">+7 999 600 00 00</a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/imgs/Like.svg" alt=""> Телеграм</a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="assets/imgs/Like.svg" alt=""> VK</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__subinfo">
-                    <span>2024</span>
-                    <span>
-                        ИП ВИТАЛИЙ
-                    </span>
-                    <span>инн: 0000000 <br>
-                        JUHYBG: 0000000</span>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <div class="popup-wrap">
-        <div class="popup__body">
-            <div id="popup_1" class="popup__item">
-                <button class="close-popup"></button>
-                <div class="title">
-                    <h4>
-                        <span>Оставить заявку</span>
-                    </h4>
-                </div>
-                <form action="#">
-                    <label>
-                        <input placeholder="Ваше имя" type="text" name="username">
-                    </label>
-                    <label>
-                        <input type="text" placeholder="Ваш телефон" name="userphone">
-                    </label>
-                    <span>или</span>
-                    <label>
-                        <input type="text" name="userid" placeholder="ID в социальных сетях">
-                    </label>
-                    <label>
-                        <select name="user-select" >
-                            <option value="default">Ваша цель</option>
-                            <option value="upgrade">Обновить ПК</option>
-                            <option value="create">Собрать с нуля</option>
-                        </select>
-                    </label>
-                    <div class="action">
-                        <button class="main-btn">Оставить заявку</button>
-                    </div>
-                </form>
-                <div class="popup-more">
-                    <span>Вы также можете связаться со мной напрямую</span>
-                    <div class="popup-more__wrap">
-                        <a href="#">
-                            Telegram
-                        </a>
-                        <a href="#">
-                            Vk
-                        </a>
-                        <a href="#">
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- <div id="popup_2" class="popup__item">
-
-            </div> -->
-        </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="assets/libs/swiper-bundle.min.js"></script>
-<script src="assets/js/app.js?ver=2"></script>
-
-</html>
+        

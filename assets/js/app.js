@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buttons.forEach(button => {
             button.addEventListener('click', function (event) {
                 event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-
+                CloseMobileMenu();
                 // Получаем значение атрибута data-goto (это будет id элемента)
                 const targetId = button.getAttribute('data-goto');
 
@@ -85,21 +85,65 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const mobileMenuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.header__mobile-menu');
+    const mainContent = document.querySelector('main');
+    if (mobileMenuBtn) {
+
+        // Обработчик клика на кнопку меню
+        mobileMenuBtn.addEventListener('click', (e) => {
+            if (mobileMenuBtn.classList.contains('active')) {
+                CloseMobileMenu();
+            } else {
+                OpenMobileMenu();
+            }
+        });
+        // Функция для открытия мобильного меню
+    }
+
+    function OpenMobileMenu() {
+        mobileMenuBtn.classList.add('active');
+        mobileMenu.classList.add('active');
+        mainContent.classList.add('opacity');
+        document.body.style.overflow = 'hidden';
+
+        // Обработчик клика вне области .header__wrap
+        document.addEventListener('click', handleClickOutside);
+    }
+
+    // Функция для закрытия мобильного меню
+    function CloseMobileMenu() {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mainContent.classList.remove('opacity');
+        document.body.style.overflow = 'auto';
+
+        // Удаляем обработчик клика вне области .header__wrap
+        document.removeEventListener('click', handleClickOutside);
+    }
+
+    // Функция для обработки клика вне .header__wrap
+    function handleClickOutside(event) {
+        if (!event.target.closest('.header__wrap')) {
+            CloseMobileMenu();
+        }
+    }
+
     const callPopupItems = document.querySelectorAll('.call-popup');
     if (callPopupItems.length !== 0) {
         const popupWrap = document.querySelector('.popup-wrap');
         const closePopupBtn = document.querySelector('.close-popup');
-        const popupItem = document.querySelector('.popup__item'); 
+        const popupItem = document.querySelector('.popup__item');
 
         function openPopup() {
-            document.body.style.overflow = 'hidden'; 
-            popupWrap.classList.add('active'); 
+            document.body.style.overflow = 'hidden';
+            popupWrap.classList.add('active');
         }
 
-        
+
         function closePopup() {
             document.body.style.overflow = 'auto';
-            popupWrap.classList.remove('active'); 
+            popupWrap.classList.remove('active');
         }
 
         callPopupItems.forEach(item => {
@@ -108,16 +152,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
         closePopupBtn.addEventListener('click', closePopup);
 
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape' && popupWrap.classList.contains('active')) {
                 closePopup();
             }
         });
 
-        popupWrap.addEventListener('click', function(event) {
-            if (!popupItem.contains(event.target)) { 
+        popupWrap.addEventListener('click', function (event) {
+            if (!popupItem.contains(event.target)) {
                 closePopup();
             }
+        });
+    }
+
+
+    const form = document.getElementById('my-form');
+    const responseMessage = document.getElementById('response-message');
+
+    if (form) {
+        const formAction = form.getAttribute('action');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(formAction, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    responseMessage.innerHTML = '<p style="color: green;">' + data + '</p>';
+                    form.reset();
+                })
+                .catch(error => {
+                    responseMessage.innerHTML = '<p style="color: red;">Ошибка при отправке формы.</p>';
+                });
         });
     }
 
